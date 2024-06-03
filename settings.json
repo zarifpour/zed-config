@@ -25,7 +25,10 @@
   "buffer_font_family": "Ligalex Mono",
   "ui_font_family": "BlexMono Nerd Font",
   "terminal": {
-    "font_family": "BlexMono Nerd Font"
+    "font_family": "BlexMono Nerd Font",
+    "env": {
+      "EDITOR": "zed --wait"
+    }
   },
   "buffer_font_size": 15, // Editor font size
   "ui_font_size": 16,
@@ -71,6 +74,13 @@
     "show_type_hints": true,
     "show_parameter_hints": true,
     "show_other_hints": true
+  },
+  "format_on_save": "on",
+  "formatter": {
+    "external": {
+      // "command": "node_modules/.bin/prettier",
+      "arguments": ["--stdin-filepath", "{buffer_path}"]
+    }
   },
   "language_overrides": {
     "Python": {
